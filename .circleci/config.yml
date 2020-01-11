@@ -44,7 +44,7 @@ jobs:
         docker_layer_caching: true
 
       - run: |
-        TAG=0.1.$CIRCLE_BUILD_NUM
-        docker build -t droach282/wishlist:$TAG .
-        echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin
-        docker push droach282/wishlist:$TAG
+          TAG=0.1.$CIRCLE_BUILD_NUM
+          docker build -t droach282/wishlist:$TAG .
+          echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin
+          docker push droach282/wishlist:$TAG
